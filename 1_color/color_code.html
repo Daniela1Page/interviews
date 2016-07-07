@@ -7,23 +7,32 @@
     </head>
     <body>
         <button>Click me</button>
-        <div style="width: 30px; height:30px;border: 2px solid black"></div>
+        <div id="colBlock" style="width: 30px; height:30px;border: 2px solid black"></div>
         <div>RGB: <span class="rgb-code"></span></div>
         <div>HEX: <span class="hex-code"></span></div>
         <script>
-            var html = '';
             var red;
             var green;
             var blue;
             var rgbColor;
+            var hexColor;
+
+            var getRandomColor = function (){
+                return Math.floor(Math.random() * 256);
+            };
 
             var colorDiv = function() {
-                red = Math.floor(Math.random() * 256);
-                green = Math.floor(Math.random() * 256);
-                blue = Math.floor(Math.random() * 256);
+                red = getRandomColor();
+                green = getRandomColor();
+                blue = getRandomColor();
+
+                hexColor = "#"+red.toString(16) + green.toString(16) + blue.toString(16);
+
                 rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
-                html += '<div style="width: 30px; height:30px; background-color:' + rgbColor + '"></div>';
-                $('div').html(html);
+
+                $('#colBlock').css('background-color',rgbColor);
+                $('.rgb-code').text(rgbColor);
+                $('.hex-code').text(hexColor);
             };
 
             $('button').click(function () {
