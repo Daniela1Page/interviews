@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Interview</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    </head>
+    <body>
+        <button class="sm-num">Test small numbers</button>
+        <button class="b-num">Test big numbers</button>
+        <div class="fib1" style="width: 400px; height: 70px; border: 1px solid black; padding: 10px"></div>
+        <div class="fib2" style="width: 400px; height: 70px; border: 1px solid black; padding: 10px"></div>
+
+        <script>
+
+            function isFibonacci(num) {
+
+            }
+
+
+            $('button.sm-num').on('click', function () {
+                $('.fib1').html("<div class='fib1'><p>4181 is a Fibonacci number</p><p>" +isFibonacci(4181)+ "</p></div>");
+                $('.fib2').html("<div class='fib2'><p>1599 is not a Fibonacci number</p><p>" +isFibonacci(1599)+ "</p></div>");
+            });
+            $('button.b-num').on('click', function () {
+                $('.fib1').html("<div class='fib1'><p>679891637638612258 is a Fibonacci number</p><p>" +isFibonacci(679891637638612258)+ "</p></div>");
+                $('.fib2').html("<div class='fib2'><p>31940434634990099903 is not a Fibonacci number</p><p>" +isFibonacci(31940434634990099903)+ "</p></div>");
+            });
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Interview</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    </head>
+    <body>
+        <button>Click me</button>
+        <div style="width: 30px; height:30px;border: 2px solid black"></div>
+        <div>RGB: <span class="rgb-code"></span></div>
+        <div>HEX: <span class="hex-code"></span></div>
+        <script>
+            var html = '';
+            var red;
+            var green;
+            var blue;
+            var rgbColor;
+
+            var colorDiv = function() {
+                red = Math.floor(Math.random() * 256);
+                green = Math.floor(Math.random() * 256);
+                blue = Math.floor(Math.random() * 256);
+                rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+                html += '<div style="width: 30px; height:30px; background-color:' + rgbColor + '"></div>';
+                $('div').html(html);
+            };
+
+            $('button').click(function () {
+                colorDiv();
+            });
+        </script>
+    </body>
+</html>

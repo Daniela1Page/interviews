@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Interview</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    </head>
+    <body>
+        <button>Click me</button>
+        <div class="emp1" style="width: 400px; height: 150px; border: 1px solid black; padding: 10px"></div>
+        <div class="emp2" style="width: 400px; height: 150px; border: 1px solid black; padding: 10px"></div>
+
+        <script>
+
+            var Employee = function (name, company, salary) {
+            //    make the attributes public
+
+            //    private function increaseSalary
+
+            //    public function called displayIncreasedSalary
+
+            };
+
+
+            var emp1 = new Employee("John","Pluto",3000);
+            var emp2 = new Employee("Ren","Pluto");
+
+            $('button').on('click', function () {
+                $('.emp1').html("<div class='emp1'><p>Name: "+emp1.name+"</p><p>Company: "+emp1.company+"</p><p>Old salary: "+emp1.salary+"</p><p>New salary: "+emp1.displayIncreasedSalary()+"</p></div>");
+                $('.emp2').html("<div class='emp2'><p>Name: "+emp2.name+"</p><p>Company: "+emp2.company+"</p><p>Old salary: "+emp2.salary+"</p><p>New salary: "+emp2.displayIncreasedSalary()+"</p></div>");
+            });
+
+        </script>
+    </body>
+</html>
