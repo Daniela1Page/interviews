@@ -7,9 +7,9 @@
     </head>
     <body>
         <button>Click me</button>
-        <div style="width: 30px; height:30px;border: 2px solid black"></div>
-        <div>RGB: <span class="rgb-code"></span></div>
-        <div>HEX: <span class="hex-code"></span></div>
+        <div id="box" style="width: 30px; height:30px;border: 2px solid black"></div>
+        <div id="rgb">RGB: <span class="rgb-code"></span></div>
+        <div id="hex">HEX: <span class="hex-code"></span></div>
         <script>
             var html = '';
             var red;
@@ -23,7 +23,8 @@
                 blue = Math.floor(Math.random() * 256);
                 rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
                 html += '<div style="width: 30px; height:30px; background-color:' + rgbColor + '"></div>';
-                $('div').html(html);
+                $('#box').html(html);
+                $('.rgb-code').html(rgbColor);
             };
 
             $('button').click(function () {
